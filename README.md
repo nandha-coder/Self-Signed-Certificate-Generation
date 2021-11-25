@@ -1,2 +1,13 @@
 # Self-Signed-Certificate-Generation
-This set of scripts will be usefull to generate the self signed TLS certificates 
+
+## This script is used to Generate the self signed Certificates and Keys
+## 
+## Useage:  
+           $ 
+           $ generate_servercert_serverkey <common name>
+
+  
+  
+## VERSION 1.0
+## DATE: 20th November 2021
+## Author: Nandhakumar Madheshwaran
