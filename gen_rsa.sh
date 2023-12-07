@@ -37,7 +37,7 @@ fi
 echo "Generating $CA_KEY for $commonname"
 
 #Generate a CA key
-openssl genrsa 2048 > $CA_KEY
+openssl genrsa -out $CA_KEY 2048
 sleep 2
 echo "$CA_KEY successfully Generated"
 #Generate CA Certificate
