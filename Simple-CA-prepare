@@ -1,0 +1,12 @@
+mkdir /root/certificates
+cd /root/certificates
+# 1. Creating a private key for Certificate Authority
+openssl genrsa -out ca.key 2048
+# 2. Creating CSR
+openssl req -new -key ca.key -subj "/CN=KUBERNETES-CA" -out ca.csr
+# 3. Self-Sign the CSR
+openssl x509 -req -in ca.csr -signkey ca.key -CAcreateserial  -out ca.crt -days 1000
+# 4. See Contents of Certificate
+openssl x509 -in ca.crt -text -noout
+# 5. Remove CSR
+rm -f ca.csr
